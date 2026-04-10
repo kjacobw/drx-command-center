@@ -1,0 +1,83 @@
+{
+  "version": "2025-04",
+  "currency": "USD",
+  "unit": "per_square",
+  "note": "Metal roofing prices include material only. Labor is typically 1.5-2x material cost.",
+  "products": [
+    {
+      "id": "standing-seam-24g",
+      "manufacturer": "Generic / Distributor",
+      "product_line": "Standing Seam Panel",
+      "category": "standing_seam",
+      "gauge": 24,
+      "panel_width_inches": 16,
+      "warranty_years": 40,
+      "wind_rating_mph": 160,
+      "price_per_square": 450.00,
+      "material": "Galvalume steel",
+      "colors": ["Charcoal Gray", "Burnished Slate", "Colonial Red", "Evergreen", "Regal White"],
+      "florida_approved": true,
+      "notes": "Hidden fastener system. Premium residential and commercial. Best long-term value."
+    },
+    {
+      "id": "standing-seam-26g",
+      "manufacturer": "Generic / Distributor",
+      "product_line": "Standing Seam Panel",
+      "category": "standing_seam",
+      "gauge": 26,
+      "panel_width_inches": 16,
+      "warranty_years": 30,
+      "wind_rating_mph": 150,
+      "price_per_square": 380.00,
+      "material": "Galvalume steel",
+      "colors": ["Charcoal Gray", "Burnished Slate", "Colonial Red", "Evergreen", "Regal White"],
+      "florida_approved": true,
+      "notes": "Lighter gauge standing seam. Good for residential reroof projects."
+    },
+    {
+      "id": "metal-r-panel-26g",
+      "manufacturer": "Generic / Distributor",
+      "product_line": "R-Panel (Exposed Fastener)",
+      "category": "r_panel",
+      "gauge": 26,
+      "panel_width_inches": 36,
+      "warranty_years": 20,
+      "wind_rating_mph": 130,
+      "price_per_square": 220.00,
+      "material": "Galvalume steel",
+      "colors": ["Charcoal", "Galvalume", "Regal White", "Aged Copper"],
+      "florida_approved": true,
+      "notes": "Exposed fastener. Cost-effective for commercial / agricultural. Common in FL."
+    },
+    {
+      "id": "corrugated-metal-29g",
+      "manufacturer": "Generic / Distributor",
+      "product_line": "Corrugated Panel",
+      "category": "corrugated",
+      "gauge": 29,
+      "panel_width_inches": 26,
+      "warranty_years": 15,
+      "wind_rating_mph": 110,
+      "price_per_square": 185.00,
+      "material": "Galvanized steel",
+      "colors": ["Galvanized", "Galvalume"],
+      "florida_approved": true,
+      "notes": "Entry-level metal roofing. Agricultural and utility buildings. Not recommended for residential."
+    },
+    {
+      "id": "metal-tile-stone-coat",
+      "manufacturer": "Stone Coated Steel",
+      "product_line": "Stone Coated Steel Tile",
+      "category": "metal_tile",
+      "gauge": 26,
+      "panel_width_inches": null,
+      "warranty_years": 50,
+      "wind_rating_mph": 120,
+      "price_per_square": 520.00,
+      "material": "Galvalume steel with stone coating",
+      "colors": ["Barkwood", "Charcoal", "Copper Canyon", "Rustic Shingle"],
+      "florida_approved": true,
+      "notes": "Looks like tile, performs like metal. Very popular in FL for insurance benefits."
+    }
+  ]
+}

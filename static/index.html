@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DRX Command Center</title>
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-icon">⬡</span>
+        <span class="logo-text">DRX <strong>Command Center</strong></span>
+      </div>
+      <div class="status-bar">
+        <span id="jt-status" class="status-dot dot-checking" title="JobTread connection">JobTread</span>
+        <span id="ai-status" class="status-dot dot-checking" title="AI engine">AI</span>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="input-section">
+      <label for="brain-dump" class="section-label">What do you need done?</label>
+      <textarea id="brain-dump" placeholder="Brain dump here — be specific. Examples:&#10;• Give me a dual estimate for the Henderson job — GAF Timberline HDZ and OC Duration Storm.&#10;• Write a claim update letter to Security First for claim #SF-88234, property at 123 Oak St.&#10;• Add a note to the Martinez job that measurements came back from Roofr — 24.5 SQ, scheduling next week.&#10;• Write a follow-up email to the Johnson family — they're waiting on the estimate from last Tuesday."></textarea>
+
+      <div class="controls">
+        <div class="control-group">
+          <label for="pdf-upload">Attach Roofr PDF (optional):</label>
+          <div class="file-upload-wrapper">
+            <input type="file" id="pdf-upload" accept=".pdf" />
+            <label for="pdf-upload" class="file-label" id="file-label-text">Choose PDF</label>
+            <span id="file-name" class="file-name"></span>
+          </div>
+        </div>
+
+        <div class="control-group">
+          <label for="carrier-select">Carrier:</label>
+          <select id="carrier-select">
+            <option value="auto">Auto-detect from text</option>
+            <option value="security_first">Security First Financial</option>
+            <option value="american_integrity">American Integrity Insurance</option>
+          </select>
+        </div>
+
+        <div class="control-group checkbox-group">
+          <label>
+            <input type="checkbox" id="write-to-jt" />
+            Auto-save to JobTread
+          </label>
+        </div>
+      </div>
+
+      <button id="process-btn" class="btn-primary" onclick="processRequest()">
+        <span id="btn-text">Process Request</span>
+        <span id="btn-spinner" class="spinner hidden"></span>
+      </button>
+    </section>
+
+    <!-- Progress area -->
+    <section id="progress-section" class="progress-section hidden">
+      <div id="progress-log"></div>
+    </section>
+
+    <!-- PDF parse summary -->
+    <div id="pdf-summary" class="pdf-summary hidden">
+      <strong>PDF Parsed:</strong>
+      <pre id="pdf-summary-text"></pre>
+    </div>
+
+    <!-- Results tabs -->
+    <section id="results-section" class="results-section hidden">
+      <div class="results-header">
+        <h2>Results</h2>
+        <span id="token-count" class="token-info"></span>
+      </div>
+      <div id="tab-bar" class="tab-bar"></div>
+      <div id="tab-content" class="tab-content"></div>
+    </section>
+  </main>
+
+  <script src="/static/app.js"></script>
+  <script>
+    // Check server health on load
+    fetch('/api/health').then(r => r.json()).then(d => {
+      document.getElementById('jt-status').className = 'status-dot ' + (d.jobtread_live ? 'dot-ok' : (d.jobtread_configured ? 'dot-warn' : 'dot-off'));
+      document.getElementById('jt-status').title = d.jobtread_live ? 'JobTread connected' : (d.jobtread_configured ? 'JobTread key set but not verified' : 'JobTread not configured');
+      document.getElementById('ai-status').className = 'status-dot ' + (d.anthropic_configured ? 'dot-ok' : 'dot-off');
+      document.getElementById('ai-status').title = d.anthropic_configured ? 'AI connected' : 'ANTHROPIC_API_KEY not set';
+    }).catch(() => {
+      document.getElementById('ai-status').className = 'status-dot dot-off';
+    });
+
+    // File input display
+    document.getElementById('pdf-upload').addEventListener('change', function() {
+      const name = this.files[0] ? this.files[0].name : '';
+      document.getElementById('file-name').textContent = name;
+    });
+  </script>
+</body>
+</html>

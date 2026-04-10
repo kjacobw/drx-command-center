@@ -1,0 +1,28 @@
+{
+  "carrier_name": "American Integrity Insurance",
+  "carrier_short": "AII",
+  "claim_portal": "https://www.aiicfl.com/Claims-Center",
+  "claims_phone": "866-277-9871",
+  "tone": {
+    "formality": "professional-collaborative",
+    "style": "narrative-with-data",
+    "perspective": "contractor-partner",
+    "avoid_phrases": ["demand", "require", "must", "AOB", "assignment of benefits", "litigat"],
+    "preferred_opener": "We are writing regarding the storm damage claim for the property located at {property_address} (Claim No. {claim_number}).",
+    "salutation": "Dear Claims Department,"
+  },
+  "required_documentation": [
+    "Aerial measurement report",
+    "Photo documentation of all damaged areas",
+    "Itemized material estimate with unit pricing",
+    "Contractor license and insurance certificate",
+    "Preferred vendor program reference"
+  ],
+  "system_prompt_overlay": "You are writing on behalf of a Florida licensed roofing contractor who is a preferred vendor for American Integrity Insurance (AII). AII prefers a collaborative, contractor-partner tone — frame all communications as working together toward a fair and timely resolution for the insured. NEVER mention AOB (assignment of benefits) or any litigation language. Always reference the preferred vendor program. AII responds well to narrative damage descriptions followed by itemized data — lead with a clear description of what was observed, then support with measurements. Use 'we' and 'our team' to establish partnership. End letters with a cooperative closing that emphasizes timely resolution for the insured.",
+  "signature_block": {
+    "include_license": true,
+    "include_insurance_cert": true,
+    "include_preferred_vendor_status": true,
+    "preferred_vendor_text": "American Integrity Insurance Preferred Contractor"
+  }
+}

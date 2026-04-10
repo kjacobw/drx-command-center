@@ -1,0 +1,81 @@
+{
+  "version": "2025-04",
+  "currency": "USD",
+  "note": "Accessory quantities are calculated automatically per square or linear foot.",
+  "items": [
+    {
+      "id": "synthetic-underlayment",
+      "name": "Synthetic Underlayment (30 lb equivalent)",
+      "unit": "SQ",
+      "price_per_unit": 18.00,
+      "coverage_sq_per_roll": 10,
+      "calculation": "1:1 with total squares",
+      "notes": "Standard for FL. Required by code under shingles."
+    },
+    {
+      "id": "ice-water-shield",
+      "name": "Ice & Water Shield / Peel-and-Stick",
+      "unit": "SQ",
+      "price_per_unit": 65.00,
+      "coverage_sq_per_roll": 2,
+      "calculation": "eave_length × 3ft / 100 (first 3 ft from eave)",
+      "notes": "Required in FL for eaves and valleys. Also used at all penetrations."
+    },
+    {
+      "id": "ridge-cap-shingle",
+      "name": "Ridge Cap Shingles (High-Profile)",
+      "unit": "LF",
+      "price_per_unit": 2.50,
+      "calculation": "ridge_length + hip_length",
+      "notes": "High-profile ridge cap. Priced per linear foot."
+    },
+    {
+      "id": "starter-strip",
+      "name": "Starter Strip (Pro-Start)",
+      "unit": "LF",
+      "price_per_unit": 1.20,
+      "calculation": "eave_length + rake_length",
+      "notes": "Covers eaves and rakes. Required under first course."
+    },
+    {
+      "id": "drip-edge-aluminum",
+      "name": "Aluminum Drip Edge (2\"x4\")",
+      "unit": "LF",
+      "price_per_unit": 1.50,
+      "calculation": "eave_length + rake_length",
+      "notes": "FL code requires drip edge at all eaves and rakes."
+    },
+    {
+      "id": "pipe-boot-standard",
+      "name": "Pipe Boot Flashing (standard)",
+      "unit": "EA",
+      "price_per_unit": 22.00,
+      "calculation": "manual — count from scope",
+      "notes": "Price per pipe boot. Count varies by job."
+    },
+    {
+      "id": "step-flashing",
+      "name": "Step Flashing (aluminum)",
+      "unit": "LF",
+      "price_per_unit": 2.00,
+      "calculation": "step_flashing_length",
+      "notes": "At walls and dormers."
+    },
+    {
+      "id": "roofing-nails",
+      "name": "Coil Roofing Nails (1-3/4\")",
+      "unit": "SQ",
+      "price_per_unit": 4.00,
+      "calculation": "1:1 with total squares",
+      "notes": "Approximately 1 coil per 4 squares."
+    },
+    {
+      "id": "roof-decking-osb",
+      "name": "OSB Roof Decking (7/16\")",
+      "unit": "SQ",
+      "price_per_unit": 85.00,
+      "calculation": "manual — based on decking scope",
+      "notes": "Only include if decking replacement is in scope."
+    }
+  ]
+}

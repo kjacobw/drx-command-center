@@ -1,0 +1,29 @@
+{
+  "carrier_name": "Security First Financial",
+  "carrier_short": "SFI",
+  "claim_portal": "https://www.securityfirstflorida.com/claims-process/",
+  "claims_phone": "877-333-9992",
+  "tone": {
+    "formality": "formal",
+    "style": "technical-documentation",
+    "perspective": "third-party-contractor",
+    "avoid_phrases": ["we believe", "I think", "probably", "we feel", "it seems"],
+    "preferred_opener": "This letter is submitted on behalf of the insured at {property_address} in connection with claim number {claim_number}.",
+    "salutation": "Dear Claims Examiner,"
+  },
+  "required_documentation": [
+    "Aerial measurement report (Roofr or EagleView)",
+    "Photographic evidence of damage (minimum 15 photos)",
+    "Signed contractor agreement / direction to pay",
+    "Material specification sheet with manufacturer data",
+    "Date of loss confirmation",
+    "Contractor license number (FL CGC or CCC)"
+  ],
+  "system_prompt_overlay": "You are writing on behalf of a Florida licensed roofing contractor who is a preferred vendor for Security First Financial (SFI). Maintain a formal, technical-documentation tone throughout. Use passive voice for damage descriptions (e.g., 'damage was observed' not 'we saw damage'). Always reference the policy number and claim number in the opening paragraph. Include all measurement data numerically — never approximate. SFI reviewers respond well to itemized measurement data; always include square footage, pitch, and linear measurements when discussing the roof. The contractor's Florida license number and preferred vendor status should appear in the signature block. Never use assignment of benefits (AOB) language.",
+  "signature_block": {
+    "include_license": true,
+    "include_insurance_cert": true,
+    "include_preferred_vendor_status": true,
+    "preferred_vendor_text": "Security First Financial Preferred Contractor Network Member"
+  }
+}

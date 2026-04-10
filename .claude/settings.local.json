@@ -1,0 +1,17 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__Claude_Preview__preview_start",
+      "Bash(pip install:*)",
+      "Bash(python3 -m pip --version)",
+      "Bash(python -m pip --version)",
+      "Bash(py -m pip --version)",
+      "Bash(cmd.exe /c \"python --version && python -m pip --version\")",
+      "Bash(cmd.exe /c \"py --version && py -m pip --version\")",
+      "Read(//c/Users/kjacobw/AppData/Roaming/**)",
+      "Read(//c/Users/kjacobw/anaconda3/bin/**)",
+      "Read(//c/Users/kjacobw/miniconda3/bin/**)",
+      "Read(//c/ProgramData/Anaconda3/**)"
+    ]
+  }
+}
